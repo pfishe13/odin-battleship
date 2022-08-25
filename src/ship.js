@@ -1,12 +1,9 @@
 const Ship = (name, length) => {
-  const position = [];
-  let hit = 0;
+  let hits = 0;
   let sunk = false;
 
-  const isHit = (positionAttacked) => {
-    position.array.forEach((element) => {
-      if (positionAttacked === element);
-    });
+  const hit = () => {
+    hit += 1;
   };
 
   const isSunk = () => {
@@ -14,6 +11,37 @@ const Ship = (name, length) => {
       sunk = true;
     }
   };
+
+  return {
+    hit,
+    get length() {
+      return length;
+    },
+    get name() {
+      return name;
+    },
+    get sunk() {
+      return sunk;
+    },
+  };
 };
 
 export default Ship;
+
+// [
+//     {
+//         x: 0,
+//         y: 0,
+//         hit: false
+//     },
+//     {
+//         x: 1,
+//         y: 0,
+//         hit: false
+//     },
+//     {
+//         x: 2,
+//         y: 0,
+//         hit: false
+//     }
+// ]

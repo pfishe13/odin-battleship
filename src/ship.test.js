@@ -1,14 +1,11 @@
-// import Ship from './ship';
+import Ship from './ship';
 
-// beforeAll(() => {});
+test('Test ship name', () => {
+  let newShip = Ship('Destroyer', 5);
+  expect(newShip.name).toBe('Destroyer');
+});
 
-// test('Test ship creation', () => {
-//   let newShip = Ship('Destroyer', 5);
-//   expect(newShip).toMatchObject({
-//     name: 'Destroyer',
-//     length: 5,
-//     position: [],
-//     hit: 0,
-//     sunk: false,
-//   });
-// });
+test('Test ship sunk', () => {
+  let newShip = Ship('Destroyer', 5);
+  expect(newShip.sunk).toBe(false);
+});
